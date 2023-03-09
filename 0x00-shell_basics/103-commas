@@ -1,3 +1,2 @@
 #!/bin/bash
-ls -1p | sed -e 's/^\(\.[^\.]*\)$/\1\//' -e 's/\(.*\/\)/\1 /' | LC_ALL=C sort -d | tr '\n' ','
-
+ls -p -a | sed -e 's/\(.*\)/\1,/' | tr -d '\n' | sed -e 's/,$/\n/'
